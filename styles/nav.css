@@ -1,32 +1,17 @@
-.links-wrapper {
+.left-content {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    width: 250px;
     align-items: center;
-    height: 50px;
+    margin-top: 6rem;
 }
 
-.links-wrapper > .nav-link {
-    margin-top: 5px;  
-    width: 150px;
-    display: flex;
-    justify-content: center;
-}
 
-.links-wrapper > .nav-link a {
-    text-decoration: none;
-    font-family: 'Didact Gothic', sans-serif;
-    color: lightgray;
-    font-size: 1.1em;
-    transition: 0.5s;
-    border-bottom: 5px solid transparent;
-    border-radius: 10px;
-    transition: 1s;
-}
 
-.links-wrapper > .nav-link a:hover {
-    color: #cea135;
-    letter-spacing: 1.5px;
-    align-self: flex-end;
-    border-bottom: 5px solid #11122b;
-    
-} 
+
+.left-content > .profile-pic img {
+	height: 150px;
+	width: 150px;
+	filter: brightness(0.8);
+	
+}
