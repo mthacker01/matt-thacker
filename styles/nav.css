@@ -2,16 +2,43 @@
     display: flex;
     flex-direction: column;
     width: 250px;
+    height: auto;
     align-items: center;
-    margin-top: 6rem;
+    background-color: #11122b;
+    filter: opacity(0.75);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
-
-
-
 
 .left-content > .profile-pic img {
 	height: 150px;
 	width: 150px;
-	filter: brightness(0.8);
+    filter: brightness(1.0);
+    margin-top: 6rem;
 	
+}
+
+.left-content > .links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-content > .links-wrapper > .nav-link {
+    margin-top: 4rem;
+}
+
+.left-content > .links-wrapper > .nav-link a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.left-content > .links-wrapper > .nav-link a:hover {
+    color: #cea135;
+    letter-spacing: 1px;
+}
+
+#contact {
+    margin-bottom: 1rem;
 }
