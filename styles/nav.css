@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: auto;
     align-items: center;
     background-color: #11122b;
     filter: opacity(0.75);
@@ -25,7 +24,7 @@
 }
 
 .left-content > .links-wrapper > .nav-link {
-    margin-top: 4rem;
+    margin-top: 1.5rem;
 }
 
 .left-content > .links-wrapper > .nav-link a {
