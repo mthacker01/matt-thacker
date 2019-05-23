@@ -67,9 +67,15 @@ html, body {
     color: #11122b;
     padding-left: 35px;
     }
+.resume i:hover {
+    color: #cea135;
+}
 .gallery i {
     color: #11122b;
     padding-left: 20px;
+}
+.gallery i:hover {
+    color: #cea135;
 }
 .article p {
     font-size: 1.5em;
@@ -173,4 +179,13 @@ html, body {
         grid-row: 5 / ;
         grid-column: 1 / 2;
     }
+    .main i {
+        font-size: 1.5em;
+    }
+    .article p {
+        font-size: 1em;
+    }
+    .resume i {
+        padding-left: 25px;
+        }
 }

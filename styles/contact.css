@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    background-image: url(../Images/background5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	margin: 0 0 0 0;
+	position: relative;
+	font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
+	font-size: 20px;
+    font-weight: normal;
+}
+.container {
+    display: grid;
+    min-height: 100%;
+}
+
+.footer{
+    background-color: #11122b;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    filter: opacity(0.9);
+}
+
+.social-media-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.social-media-icons a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+.social-media-icons a:hover {
+    color: #cea135;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+
+.copyright {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: #858585;
+    display: flex;
+    align-items: flex-end;
+}
+.copyright p{
+    margin-bottom: 15px;
+}
+
+
+/*Desktop CSS*/
+@media only screen and (min-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 1.5fr .25fr .25fr;
+        grid-template-columns: 1fr 2fr 2fr ;
+	}
+	.social-media-icons {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+    }
+    .copyright {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+    }
+}
