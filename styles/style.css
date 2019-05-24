@@ -4,7 +4,7 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+    background-attachment: fixed;
 	margin: 0 0 0 0;
 	position: relative;
 	font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
@@ -15,6 +15,7 @@ html, body {
 .container {
     display: grid;
     min-height: 100%;
+    background-color: hsla(0, 0%, 65%, 0.4);
 }
 /*--------------------------BEGINS NAV CSS--------------------------*/
 .profile-pic img {
@@ -46,39 +47,37 @@ html, body {
     flex-direction: column;
     width: auto;
     align-items: center;
-    background-color: #11122b;
-    filter: opacity(0.95);
+    background-color: hsla(238, 43%, 12%, 0.8);
+    
 }
 /*--------------------------ENDS NAV CSS--------------------------*/
 
 /*--------------------------BEGINS MAIN CSS--------------------------*/
 .main {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    
 }
-.resume a {
-    text-decoration: none;
+.article > .myName {
+    font-size: 4em;
+    font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
+    color: hsl(42, 61%, 51%);
+    text-shadow: 4px 3px hsla(238, 43%, 12%, .7);
+    margin: 0;
 }
-.main i {
-    font-size: 3em;
+.main hr {
+    size: 20px;
+    background-color: #11122b;
+    width: 65%;
 }
-.resume i {
-    color: #11122b;
-    padding-left: 35px;
-    }
-.resume i:hover {
-    color: #cea135;
-}
-.gallery i {
-    color: #11122b;
-    padding-left: 20px;
-}
-.gallery i:hover {
-    color: #cea135;
-}
-.article p {
-    font-size: 1.5em;
+.article > .myTitle {
+    font-size: 1.25em;
+    font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
+    color: hsl(42, 61%, 51%);
+    text-shadow: 2px 2px hsla(238, 43%, 12%, .7);
+    margin: 0;
 }
 
 
@@ -110,7 +109,9 @@ html, body {
     letter-spacing: 1px;
     font-size: 1.5em;
 }
-
+.social-media-icons i {
+    width: 20px;
+}
 .copyright {
     text-decoration: none;
     font-size: 0.7em;
@@ -126,7 +127,7 @@ html, body {
 @media only screen and (min-width: 767px) {
     .container {
         display: grid;
-        grid-template-rows: 1fr 1.5fr .25fr .25fr;
+        grid-template-rows: 10% 1.5fr .25fr .25fr;
         grid-template-columns: 1fr 2fr 2fr ;
     }
     .profile-pic {
@@ -176,11 +177,11 @@ html, body {
         grid-column: 1 / 2;
     }
     .copyright {
-        grid-row: 5 / ;
+        grid-row: 5 / 6;
         grid-column: 1 / 2;
     }
-    .main i {
-        font-size: 1.5em;
+    .main {
+        display: none;
     }
     .article p {
         font-size: 1em;
