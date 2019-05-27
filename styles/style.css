@@ -1,3 +1,8 @@
+:root {
+    --main1-text-color: #cea135;
+    --main2-text-color: #f0f8ff;
+    --main-accent-color: #11122b;
+}
 html, body {
     height: 100%;
     background-image: url(../Images/background5.jpg);
@@ -24,24 +29,19 @@ html, body {
     filter: brightness(1.0);
     margin-top: 6rem;
 }
-.links-wrapper{
-    border-bottom-right-radius: 10px;
-}
-
 .links-wrapper a {
     text-decoration: none;
-    color: aliceblue;
+    color: var(--main2-text-color);
     transition: 0.5s;
 }
 .links-wrapper a:hover {
-    color: #cea135;
+    color: var(--main1-text-color);
     letter-spacing: 1px;
 }
 
 .nav-link {
     margin-top: 1.5rem;
 }
-
 .nav {
     display: flex;
     flex-direction: column;
@@ -49,6 +49,26 @@ html, body {
     align-items: center;
     background-color: hsla(238, 43%, 12%, 0.8);
     
+}
+.social-media-icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.social-media-icons a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+.social-media-icons a:hover {
+    color: var(--main1-text-color);
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+.social-media-icons i {
+    width: 20px;
 }
 /*--------------------------ENDS NAV CSS--------------------------*/
 
@@ -63,19 +83,19 @@ html, body {
 .article > .myName {
     font-size: 4em;
     font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
-    color: hsl(42, 61%, 51%);
+    color: var(--main1-text-color);
     text-shadow: 4px 3px hsla(238, 43%, 12%, .7);
     margin: 0;
 }
 .main hr {
     size: 20px;
-    background-color: #11122b;
+    background-color: var(--main-accent-color);
     width: 65%;
 }
 .article > .myTitle {
     font-size: 1.25em;
     font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
-    color: hsl(42, 61%, 51%);
+    color: var(--main1-text-color);
     text-shadow: 2px 2px hsla(238, 43%, 12%, .7);
     margin: 0;
 }
@@ -84,39 +104,12 @@ html, body {
 /*--------------------------ENDS MAIN CSS--------------------------*/
 
 /*--------------------------BEGINS FOOTER CSS--------------------------*/
-.footer{
-    background-color: #11122b;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    width: 100%;
-    filter: opacity(0.9);
-}
-
-.social-media-icons {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-}
-.social-media-icons a {
-    text-decoration: none;
-    color: #fff;
-    transition: .5s;
-}
-.social-media-icons a:hover {
-    color: #cea135;
-    letter-spacing: 1px;
-    font-size: 1.5em;
-}
-.social-media-icons i {
-    width: 20px;
-}
 .copyright {
     text-decoration: none;
     font-size: 0.7em;
     color: #858585;
     display: flex;
+    justify-content: center;
     align-items: flex-end;
 }
 .copyright p{
@@ -124,7 +117,7 @@ html, body {
 }
 
 /*Desktop CSS*/
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 1025px) {
     .container {
         display: grid;
         grid-template-rows: 10% 1.5fr .25fr .25fr;
@@ -139,12 +132,12 @@ html, body {
         grid-column: 1 / 2;
     }
     .social-media-icons {
-        grid-row: 3 / 4;
-        grid-column: 1 / -1;
+        grid-row: 3 / 5;
+        grid-column: 1 / 2;
     }
     .copyright {
         grid-row: 4 / 5;
-        grid-column: 1 / -1;
+        grid-column: 2 / 4;
     }
     .main {
         grid-row: 2 / 3;
@@ -153,8 +146,8 @@ html, body {
     
 }
 
-/*Tablet CSS*/
-@media only screen and (max-width: 600px) {
+/*phone CSS*/
+@media only screen and (max-width: 767px) {
     .container {
         display: grid;
         grid-template-rows: auto;
@@ -186,7 +179,41 @@ html, body {
     .article p {
         font-size: 1em;
     }
-    .resume i {
-        padding-left: 25px;
-        }
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .profile-pic {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .links-wrapper {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    .main {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .social-media-icons {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    .copyright {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+    .main {
+        display: none;
+    }
+    .article p {
+        font-size: 1em;
+    }
+    
 }

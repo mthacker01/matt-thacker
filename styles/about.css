@@ -15,7 +15,51 @@ html, body {
     display: grid;
     min-height: 100%;
 }
+/*--------------------------BEGINS NAV CSS--------------------------*/
+.nav {
+    display: flex;
+	justify-content: space-evenly;
+    align-items: center;
+    background-color: hsla(238, 43%, 12%, 0.8); 
+}
+.links-wrapper a {
+    text-decoration: none;
+    color: #f0f8ff;
+	transition: 0.5s;
+}
+.links-wrapper a:hover {
+    color: #cea135;
+    letter-spacing: 1px;
+}
 
+.nav-link {
+	margin-top: 1.5rem;
+	width: 120px;
+}
+/*--------------------------END NAV CSS--------------------------*/
+.profile {
+	background-color: hsla(0, 0%, 52%, 0.8);
+	transform: scale(1.1, 0.6); 
+	border-radius: 80px;
+}
+.bitmoji {
+	/*mix-blend-mode: multiply;*/
+	display: flex;
+	align-items: flex-end;
+}
+.bitmoji img {
+	height: 400px;
+}
+.profile p {
+	color: #cea135;
+	font-size: 1.5em;
+	margin-left: 10px;
+	margin-top: 30px;
+	padding: 5px;
+	font-family:  'Didact Gothic', sans-serif, "Helvetica Neue";
+	text-shadow: 2px 2px hsla(238, 43%, 12%, .7);
+}
+/*--------------------------BEGINS FOOTER CSS--------------------------*/
 .footer{
     background-color: #11122b;
     display: flex;
@@ -41,7 +85,9 @@ html, body {
     letter-spacing: 1px;
     font-size: 1.5em;
 }
-
+.social-media-icons i {
+    width: 20px;
+}
 .copyright {
     text-decoration: none;
     font-size: 0.7em;
@@ -52,14 +98,25 @@ html, body {
 .copyright p{
     margin-bottom: 15px;
 }
-
+/*--------------------------End FOOTER CSS--------------------------*/
 
 /*Desktop CSS*/
 @media only screen and (min-width: 767px) {
     .container {
         display: grid;
-        grid-template-rows: 1fr 1.5fr .25fr .25fr;
+        grid-template-rows: 1fr 3fr .25fr .25fr;
         grid-template-columns: 1fr 2fr 2fr ;
+	}
+	.nav {
+		grid-column: 1 / -1;
+	}
+	.profile {
+		grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+	.bitmoji {
+		grid-row: 2 / 3;
+        grid-column: 1 / 2;
 	}
 	.social-media-icons {
         grid-row: 3 / 4;
@@ -68,5 +125,24 @@ html, body {
     .copyright {
         grid-row: 4 / 5;
         grid-column: 1 / -1;
+    }
+
+
+/*phone CSS*/
+@media only screen and (max-width: 767px) {
+	.container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	.container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
     }
 }
