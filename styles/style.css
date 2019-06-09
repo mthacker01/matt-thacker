@@ -1,7 +1,7 @@
 :root {
     --main1-text-color: #cea135;
     --main2-text-color: #f0f8ff;
-    --main-accent-color: #11122b;
+    --main-accent-color: hsla(238, 43%, 12%, 0.8);
 }
 html, body {
     height: 100%;
@@ -26,7 +26,6 @@ html, body {
 .profile-pic img {
 	height: 150px;
 	width: 150px;
-    filter: brightness(1.0);
     margin-top: 6rem;
 }
 .links-wrapper a {
@@ -47,7 +46,7 @@ html, body {
     flex-direction: column;
     width: auto;
     align-items: center;
-    background-color: hsla(238, 43%, 12%, 0.8);
+    background-color: var(--main-accent-color);
     
 }
 .social-media-icons {
@@ -120,7 +119,7 @@ html, body {
 @media only screen and (min-width: 1025px) {
     .container {
         display: grid;
-        grid-template-rows: 10% 1.5fr .25fr .25fr;
+        /*grid-template-rows: 10% 1.5fr .25fr .25fr;*/
         grid-template-columns: 1fr 2fr 2fr ;
     }
     .profile-pic {
@@ -172,6 +171,7 @@ html, body {
     .copyright {
         grid-row: 5 / 6;
         grid-column: 1 / 2;
+        background-color: var(--main-accent-color);
     }
     .main {
         display: none;
@@ -208,6 +208,7 @@ and (max-width : 1024px) {
     .copyright {
         grid-row: 5 / 6;
         grid-column: 1 / 2;
+        background-color: var(--main-accent-color);
     }
     .main {
         display: none;
