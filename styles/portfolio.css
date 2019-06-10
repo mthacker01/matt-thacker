@@ -22,6 +22,51 @@ html, body {
     display: grid;
     min-height: 100%;
 }
+/*--------------------------BEGINS NAV CSS--------------------------*/
+.nav {
+    position: relative;
+    display: flex;
+	justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--main2-accent-color); 
+}
+.links-wrapper a {
+    text-decoration: none;
+    color: var(--main2-text-color);
+	transition: 0.5s;
+}
+.links-wrapper a:hover {
+    color: var(--main1-text-color);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+	margin-top: 1.5rem;
+	width: 120px;
+}
+
+/*--------------------------ENDS NAV CSS--------------------------*/
+
+/*--------------------------BEGINS MAIN CONTENT CSS--------------------------*/
+.main {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main img {
+    height: 8rem;
+    width: 8rem;
+}
+.main p {
+    display: flex;
+    justify-content: center;
+}
+
+/*--------------------------BEGINS MAIN CONTENT CSS--------------------------*/
+
+
 /*--------------------------BEGINS FOOTER CSS--------------------------*/
 .footer{
     background-color: var(--main2-accent-color);
@@ -65,12 +110,21 @@ html, body {
 
 
 /*Desktop CSS*/
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 1025px) {
     .container {
         display: grid;
-        grid-template-rows: 1fr 1.5fr .25fr .25fr;
+        grid-template-rows: .5fr 1.5fr .25fr .25fr;
         grid-template-columns: 1fr 2fr 2fr ;
+    }
+    .nav {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
 	}
+    .main {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+    }
+
 	.social-media-icons {
         grid-row: 3 / 4;
         grid-column: 1 / -1;
@@ -79,4 +133,60 @@ html, body {
         grid-row: 4 / 5;
         grid-column: 1 / -1;
     }
+}
+
+/*phone CSS*/
+@media only screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .nav {
+		order: 2;
+		display: flex;
+		flex-direction: column;
+
+	}
+    .main {
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+    .social-media-icons {
+        padding-top: 2px;
+    }
+    .footer{
+        order: 3;
+    }
+    
+}
+
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .nav {
+		order: 2;
+		display: flex;
+		flex-direction: column;
+
+	}
+    .main {
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+    .social-media-icons {
+        padding-top: 2px;
+    }
+    .footer{
+        order: 3;
+    }
+    
 }
