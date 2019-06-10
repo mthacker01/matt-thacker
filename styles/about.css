@@ -1,6 +1,13 @@
+:root {
+    --main1-text-color: #cea135;
+    --main2-text-color: #e6e7e9;
+    --main-accent-color: hsla(238, 89%, 14%, 0.8);
+    --main2-accent-color: hsla(238, 43%, 12%, 0.8);
+}
+
 html, body {
     height: 100%;
-    background-image: url(../Images/background5.jpg);
+    background-image: linear-gradient(var(--main-accent-color), var(--main2-text-color), var(--main1-text-color));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -17,18 +24,19 @@ html, body {
 }
 /*--------------------------BEGINS NAV CSS--------------------------*/
 .nav {
+    position: relative;
     display: flex;
 	justify-content: space-evenly;
     align-items: center;
-    background-color: hsla(238, 43%, 12%, 0.8); 
+    background-color: var(--main2-accent-color); 
 }
 .links-wrapper a {
     text-decoration: none;
-    color: #f0f8ff;
+    color: var(--main2-text-color);
 	transition: 0.5s;
 }
 .links-wrapper a:hover {
-    color: #cea135;
+    color: var(--main1-text-color);
     letter-spacing: 1px;
 }
 
@@ -42,15 +50,9 @@ html, body {
 	transform: scale(1.1, 0.6); 
 	border-radius: 80px;
 }
-.bitmoji {
-	display: flex;
-	align-items: flex-end;
-}
-.bitmoji img {
-	height: 400px;
-}
+
 .profile p {
-	color: #cea135;
+	color: var(--main1-text-color);
 	font-size: 1.5em;
 	margin-left: 10px;
 	margin-top: 30px;
@@ -60,12 +62,12 @@ html, body {
 }
 /*--------------------------BEGINS FOOTER CSS--------------------------*/
 .footer{
-    background-color: #11122b;
+    background-color: var(--main2-accent-color);
     display: flex;
     justify-content: center;
     bottom: 0;
     width: 100%;
-    filter: opacity(0.9);
+    /*filter: opacity(0.9);*/
 }
 
 .social-media-icons {
@@ -80,7 +82,7 @@ html, body {
     transition: .5s;
 }
 .social-media-icons a:hover {
-    color: #cea135;
+    color: var(--main1-text-color);
     letter-spacing: 1px;
     font-size: 1.5em;
 }
@@ -130,7 +132,7 @@ html, body {
 /*phone CSS*/
 @media only screen and (max-width: 767px) {
 	html, body {
-		background: #f0f8ff;
+		background: var(--main2-text-color);
 	}
 	.container {
         display: grid;
@@ -161,7 +163,7 @@ html, body {
 and (min-width : 768px) 
 and (max-width : 1024px) {
 	html, body {
-		background: #f0f8ff;
+		background: var(--main2-text-color);
 	}
 	.container {
         display: grid;
